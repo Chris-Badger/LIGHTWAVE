@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        GITHUB TEST 2
+        GITHUB TEST 3
       </header>
       <div class="slidecontainer" >
           <input type="range" min="0" max="255" defaultValue="0" class="slider" id="redRange" />
