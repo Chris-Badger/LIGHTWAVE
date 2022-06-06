@@ -14,11 +14,38 @@
   color: white;
 }
 
+.item1 { grid-area: redSlider; }
+.item2 { grid-area: greenSlider; }
+.item3 { grid-area: blueSlider; }
+.item4 { grid-area: redValue; }
+.item5 { grid-area: blueValue; }
+.item6 { grid-area: greenValue; }
+.item7 { grid-area: swatches; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto ;
+  grid-template-areas:
+    'redSlider redSlider greenSlider greenSlider blueSlider blueSlider'
+    'redValue redValue blueValue blueValue greenValue greenValue'
+    'swatches swatches swatches swatches swatches swatches ';
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
 
 .slidecontainer {
-  width: 300px;
+  height: 300px;
   /* Width of the outside container */
   padding: 20px;
+  
 }
 
 /* The slider itself */
@@ -39,6 +66,8 @@
   -webkit-transition: .2s;
   /* 0.2 seconds transition on hover */
   transition: opacity .2s;
+  transform: rotate(-90deg) translate(-125px, 0px);;
+  
 
   
  
