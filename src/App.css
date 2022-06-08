@@ -20,14 +20,15 @@
 .item4 { grid-area: redValue; }
 .item5 { grid-area: blueValue; }
 .item6 { grid-area: greenValue; }
-.item7 { grid-area: swatches; }
+.item7 { grid-area: frequency_slider; }
+.item8 { grid-area: lfo_value; }
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto ;
+  grid-template-columns: auto auto auto auto ;
   grid-template-areas:
-    'redSlider  greenSlider  blueSlider '
-    'redValue blueValue  greenValue ';
+    'redSlider  greenSlider  blueSlider frequency_slider'
+    'redValue blueValue  greenValue lfo_value';
   gap: 1px;
   background-color: #000000;
   padding: 10px;
