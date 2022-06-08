@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        GITHUB TEST 4
+        
       </header>
       <div class="grid-container">
   <div class="item1"><div class="slidecontainer" >

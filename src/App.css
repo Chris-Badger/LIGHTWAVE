@@ -24,25 +24,25 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto ;
+  grid-template-columns: auto auto auto ;
   grid-template-areas:
-    'redSlider redSlider greenSlider greenSlider blueSlider blueSlider'
-    'redValue redValue blueValue blueValue greenValue greenValue'
-    'swatches swatches swatches swatches swatches swatches ';
-  gap: 10px;
-  background-color: #2196F3;
+    'redSlider  greenSlider  blueSlider '
+    'redValue blueValue  greenValue ';
+  gap: 1px;
+  background-color: #000000;
   padding: 10px;
 }
 
 .grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255);
   text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
+  padding: 0px;
+  font-size: 18px;
 }
 
 .slidecontainer {
-  height: 300px;
+  height:300px;
+
   /* Width of the outside container */
   padding: 20px;
   
@@ -57,7 +57,7 @@
   /* Full-width */
   height: 5px;
   /* Specified height */
-  background: #d3d3d3;
+  background: #2d2d2d;
   /* Grey background */
   outline: none;
   /* Remove outline */

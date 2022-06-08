@@ -7,18 +7,27 @@ function RGB_sketch(p5) {
   let r = 0;
   let g = 0;
   let b = 0;
+  let alpha = 0;
+  let lfo = 0;
+  let lfo_output = 0;
+  let lfo_frequency = .3;
 
   p5.setup = () => {
-  p5.createCanvas(p5.windowWidth-300, p5.windowHeight-300);
-  p5.background(170);
-  p5.fill(p5.random(255), p5.random(255), p5.random(255));
-  p5.noStroke();
-  p5.rect(20, 20, p5.width / 2 - 20, p5.height - 40);
+  p5.createCanvas(p5.windowWidth, p5.windowHeight);
   };
 
   p5.draw = () => {
-    p5.fill(r, g, b);
-    p5.rect(p5.width / 2, 20, p5.width / 2 - 20, p5.height - 40);
+    p5.background(0);
+    // build the LFO
+    lfo = lfo + lfo_frequency;
+    lfo_output = p5.sin(lfo);
+
+    // modulate alpha with the lfo
+    alpha = p5.map( lfo_output, -1, 1, 0, 255);
+
+    // display a rectangle of color
+    p5.fill(r, g, b, alpha);
+    p5.rect(0 , 0, p5.width, p5.height);
     var redSlider = document.getElementById("redRange");
     var redOutput = document.getElementById("redValue");
     redOutput.innerHTML = redSlider.value; // Display the default slider value
