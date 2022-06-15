@@ -14,47 +14,98 @@
   color: white;
 }
 
-.item1 { grid-area: redSlider; }
-.item2 { grid-area: greenSlider; }
-.item3 { grid-area: blueSlider; }
-.item4 { grid-area: redValue; }
-.item5 { grid-area: blueValue; }
-.item6 { grid-area: greenValue; }
-.item7 { grid-area: frequency_slider; }
-.item8 { grid-area: lfo_value; }
+.item1 {
+  grid-area: redSlider;
+}
+
+.item2 {
+  grid-area: greenSlider;
+}
+
+.item3 {
+  grid-area: blueSlider;
+}
+
+.item4 {
+  grid-area: redValue;
+}
+
+.item5 {
+  grid-area: blueValue;
+}
+
+.item6 {
+  grid-area: greenValue;
+}
+
+.item7 {
+  grid-area: frequency_slider;
+}
+
+.item8 {
+  grid-area: lfo_value;
+}
+
+.item9 {
+  grid-area: frequency_slider2;
+}
+
+.item10 {
+  grid-area: lfo2_value;
+}
+
+.item11 {
+  grid-area: lfo3_value;
+}
+
+.item12 {
+  grid-area: frequency_slider3;
+}
+
+.item13 {
+  grid-area: frequency_slider4;
+}
+
+.item14 {
+  grid-area: lfo4_value;
+}
+
+
+
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto auto ;
+  grid-template-columns: 120px 120px 120px 120px 120px 120px 120px;
   grid-template-areas:
-    'redSlider  greenSlider  blueSlider frequency_slider'
-    'redValue blueValue  greenValue lfo_value';
+    'redSlider frequency_slider2 greenSlider frequency_slider3 blueSlider frequency_slider4 frequency_slider'
+    'redValue lfo2_value blueValue lfo3_value greenValue lfo4_value lfo_value';
   gap: 1px;
   background-color: #000000;
   padding: 10px;
 }
 
-.grid-container > div {
+.grid-container>div {
   background-color: rgba(255, 255, 255);
   text-align: center;
   padding: 0px;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .slidecontainer {
-  height:300px;
+  height: 300px;
 
   /* Width of the outside container */
   padding: 20px;
-  
+
 }
 
 /* The slider itself */
 .slider {
+  transform: rotate(-90deg) translate(-125px, -90px);
   -webkit-appearance: none;
   /* Override default CSS styles */
   appearance: none;
-  width: 300px;
+  width: 255px;
   /* Full-width */
   height: 5px;
   /* Specified height */
@@ -67,11 +118,11 @@
   -webkit-transition: .2s;
   /* 0.2 seconds transition on hover */
   transition: opacity .2s;
-  transform: rotate(-90deg) translate(-125px, 0px);;
-  
 
-  
- 
+
+
+
+
 }
 
 /* Mouse-over effects */
@@ -92,7 +143,7 @@
   border-radius: 3px;
   background: #000000;
   /*  background */
-  cursor: pointer;
+  cursor: row-resize;
   /* Cursor on hover */
 }
 
@@ -104,6 +155,6 @@
   border-radius: 3px;
   background: #000000;
   /* background */
-  cursor: pointer;
+  cursor: row-resize;
   /* Cursor on hover */
 }
