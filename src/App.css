@@ -4,7 +4,7 @@
 
 
 .App-header {
-  background-color: #282c34;
+  background-color: #303030;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -87,21 +87,24 @@
   grid-area: frequency_slider5;
 }
 
+.item19 {
+  grid-area: logo;
+}
 
 
 .grid-container {
   display: grid;
-  grid-template-columns: 120px 120px 120px 120px 120px 120px 120px 120px 120px;
+  grid-template-columns: 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px;
   grid-template-areas:
-    'redSlider frequency_slider2    greenSlider  frequency_slider3  blueSlider  frequency_slider4  frequency_slider whiteSlider  frequency_slider5'
-    'redValue  lfo2_value           blueValue    lfo3_value         greenValue         lfo4_value  lfo_value        whiteValue   lfo5_value ';
+    'redSlider frequency_slider2    greenSlider  frequency_slider3  blueSlider  frequency_slider4  frequency_slider whiteSlider  frequency_slider5 logo'
+    'redValue  lfo2_value           blueValue    lfo3_value         greenValue         lfo4_value  lfo_value        whiteValue   lfo5_value logo';
   gap: 1px;
-  background-color: #000000;
+  background-color: #303030;
   padding: 10px;
 }
 
 .grid-container>div {
-  background-color: rgba(255, 255, 255);
+  background-color: rgb(222, 222, 222);
   text-align: center;
   padding: 0px;
   font-size: 15px;
@@ -125,7 +128,7 @@
   /* Full-width */
   height: 5px;
   /* Specified height */
-  background: #2d2d2d;
+  background: #060606;
   /* Grey background */
   outline: none;
   /* Remove outline */

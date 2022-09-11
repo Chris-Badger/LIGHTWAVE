@@ -54,7 +54,7 @@ function RGB_sketch(p5) {
     lfo3 = lfo3 + lfo3_frequency;
     lfo3_output = p5.sin(lfo3);
 
-    // build the green Mod LFO4
+    // build the blue Mod LFO4
     lfo4 = lfo4 + lfo4_frequency;
     lfo4_output = p5.sin(lfo4);
 
@@ -129,7 +129,7 @@ function RGB_sketch(p5) {
     var frequency_slider4_output = document.getElementById("lfo4_value");
     frequency_slider4_output.innerHTML = frequency_slider4.value; // Display the default slider value
 
-    // conect the blue Mod lfo4 frequency slider 
+    // conect the whiteMod lfo5 frequency slider 
     var frequency_slider5 = document.getElementById("frequency_range5");
     var frequency_slider5_output = document.getElementById("lfo5_value");
     frequency_slider5_output.innerHTML = frequency_slider5.value; // Display the default slider value
@@ -153,6 +153,11 @@ function RGB_sketch(p5) {
     // Update the blue Mod slider value (each time you drag the slider handle)
     frequency_slider4.oninput = function () {
       frequency_slider4_output.innerHTML = this.value;
+    };
+
+    // Update the white Mod slider value (each time you drag the slider handle)
+    frequency_slider5.oninput = function () {
+      frequency_slider5_output.innerHTML = this.value;
     };
 
     r = redSlider.value;

@@ -1,11 +1,12 @@
 import SYNTH_OUTPUT from './components/SYNTH_OUTPUT';
 import './App.css';
+import './lightwaveLogo.svg'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        L I G H T  W A V E
+        <img src="src/components/lightwaveLogo.svg" alt="light wave logo" />
       </header>
 
       <div class="grid-container">
@@ -35,6 +36,9 @@ function App() {
         </div></div>
         <div class="item18"><div class="slidecontainer">
           <input type="range" min="0" max="1000" defaultValue="0" class="slider" id="frequency_range5" />
+        </div></div>
+        <div class="item19"><div>
+          <img src="lightwaveLogo.svg" alt="light wave logo" />
         </div></div>
 
 
