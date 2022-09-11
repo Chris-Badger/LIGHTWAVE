@@ -1,3 +1,18 @@
+# Project Description :
+LIGHTWAVE is an additive color synthesiser.
+Use the RGB sliders to mix source colors.
+Syncopated patterns and rhythmic structures can be produced by independently modulating each color with a sinusoidal low frequency oscillator.
+The Alpha mod slider modulates the transparency of the total RGB output pre-white efectively adding black from a background layer.
+The white level is independant and post RGB as well as Alpha.  
+
+
+# Things to work on:
+* The whiteLevel default value does not revert to the slider value when the white lfo is set to 0, but it should.
+* All lfo modulators would be better if the lower bound of the mapped sine wave was controllable. As it is, the modulation sweeps between 0 and the upper bound set by the level slider. The LFOs all need a depth control.
+* The synthoutput color is currently displayed at the bottom of the page, in a canvas element that is as wide as the window in which it is opened. It would be much better if this canvas could be shown in a different window, or ideally on a different display than the controls. It would be great to be able to send the output to a separate monitor or projector with nothing else on the screen.
+* The interface is formatted for a desktop and needs to be refactored for use on a tablet.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
