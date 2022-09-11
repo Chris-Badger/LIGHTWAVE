@@ -3,11 +3,11 @@ import { ReactP5Wrapper } from "react-p5-wrapper";
 
 function RGB_sketch(p5) {
 
-
   let r = 0;
   let g = 0;
   let b = 0;
   let alpha = 255;
+  let whiteLevel = 0;
   // Declare Alfa Mod Variables
   let lfo = 0;
   let lfo_output = 0;
@@ -24,14 +24,24 @@ function RGB_sketch(p5) {
   let lfo4 = 0;
   let lfo4_output = 0;
   let lfo4_frequency = 0;
+  // Declare White Mod Variables
+  let lfo5 = 0;
+  let lfo5_output = 0;
+  let lfo5_frequency = 0;
+
+
+
+
 
 
   p5.setup = () => {
     p5.createCanvas(p5.windowWidth, p5.windowHeight);
+
   };
 
   p5.draw = () => {
     p5.background(0);
+
     // build the alpha Mod LFO
     lfo = lfo + lfo_frequency;
     lfo_output = p5.sin(lfo);
@@ -44,14 +54,23 @@ function RGB_sketch(p5) {
     lfo3 = lfo3 + lfo3_frequency;
     lfo3_output = p5.sin(lfo3);
 
-    // build the green Mod LFO3
+    // build the green Mod LFO4
     lfo4 = lfo4 + lfo4_frequency;
     lfo4_output = p5.sin(lfo4);
 
+    // build the White Mod LFO5
+    lfo5 = lfo5 + lfo5_frequency;
+    lfo5_output = p5.sin(lfo5);
+    //////////////////////////////////////////
     // display a rectangle of color
     p5.fill(r, g, b, alpha);
     p5.rect(0, 0, p5.width, p5.height);
-
+    // Display White
+    console.log(whiteLevel);
+    p5.fill(255, 255, 255, whiteLevel);
+    console.log(whiteLevel);
+    p5.rect(0, 0, p5.width, p5.height);
+    ///////////////////////////////////////////
 
     // conect RGB sliders 
     var redSlider = document.getElementById("redRange");
@@ -81,6 +100,15 @@ function RGB_sketch(p5) {
       blueOutput.innerHTML = this.value;
     };
 
+    var whiteSlider = document.getElementById("whiteRange");
+    var whiteOutput = document.getElementById("whiteValue");
+    whiteOutput.innerHTML = whiteSlider.value; // Display the default slider value
+
+    // Update the current slider value (each time you drag the slider handle)
+    whiteSlider.oninput = function () {
+      whiteOutput.innerHTML = this.value;
+    };
+
     // conect the alpha Mod lfo frequency slider 
     var frequency_slider = document.getElementById("frequency_range");
     var frequency_slider_output = document.getElementById("lfo_value");
@@ -100,6 +128,11 @@ function RGB_sketch(p5) {
     var frequency_slider4 = document.getElementById("frequency_range4");
     var frequency_slider4_output = document.getElementById("lfo4_value");
     frequency_slider4_output.innerHTML = frequency_slider4.value; // Display the default slider value
+
+    // conect the blue Mod lfo4 frequency slider 
+    var frequency_slider5 = document.getElementById("frequency_range5");
+    var frequency_slider5_output = document.getElementById("lfo5_value");
+    frequency_slider5_output.innerHTML = frequency_slider5.value; // Display the default slider value
 
 
     // Update the alpha Mod slider value (each time you drag the slider handle)
@@ -125,10 +158,12 @@ function RGB_sketch(p5) {
     r = redSlider.value;
     g = greenSlider.value;
     b = blueSlider.value;
+    whiteLevel = whiteSlider.value;
     lfo_frequency = frequency_slider.value / 1000;
     lfo2_frequency = frequency_slider2.value / 1000;
     lfo3_frequency = frequency_slider3.value / 1000;
     lfo4_frequency = frequency_slider4.value / 1000;
+    lfo5_frequency = frequency_slider5.value / 1000;
 
     // modulate alpha with the lfo
     alpha = p5.map(lfo_output, -1, 1, 0, 255);
@@ -157,6 +192,16 @@ function RGB_sketch(p5) {
     if (frequency_slider4.value == 0) {
       b = blueSlider.value;
     }
+    // modulate White with  lfo5
+    whiteLevel = p5.map(lfo5_output, -1, 1, 0, whiteSlider.value);
+    // set default white value
+    if (frequency_slider5.value === 0) {
+      whiteLevel = whiteSlider.value;
+    }
+
+
+
+
   };
 
 }

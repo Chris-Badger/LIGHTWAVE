@@ -71,14 +71,30 @@
 }
 
 
+.item15 {
+  grid-area: whiteSlider;
+}
+
+.item16 {
+  grid-area: whiteValue;
+}
+
+.item17 {
+  grid-area: lfo5_value;
+}
+
+.item18 {
+  grid-area: frequency_slider5;
+}
+
 
 
 .grid-container {
   display: grid;
-  grid-template-columns: 120px 120px 120px 120px 120px 120px 120px;
+  grid-template-columns: 120px 120px 120px 120px 120px 120px 120px 120px 120px;
   grid-template-areas:
-    'redSlider frequency_slider2 greenSlider frequency_slider3 blueSlider frequency_slider4 frequency_slider'
-    'redValue lfo2_value blueValue lfo3_value greenValue lfo4_value lfo_value';
+    'redSlider frequency_slider2    greenSlider  frequency_slider3  blueSlider  frequency_slider4  frequency_slider whiteSlider  frequency_slider5'
+    'redValue  lfo2_value           blueValue    lfo3_value         greenValue         lfo4_value  lfo_value        whiteValue   lfo5_value ';
   gap: 1px;
   background-color: #000000;
   padding: 10px;
