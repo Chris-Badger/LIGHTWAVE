@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #303030;
 }
 
 
@@ -94,7 +95,7 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: 120px 120px 120px 120px 120px 120px 120px 120px 120px 120px;
+  grid-template-columns: 120px 120px 120px 120px 120px 120px 120px 120px 120px 650px;
   grid-template-areas:
     'redSlider frequency_slider2    greenSlider  frequency_slider3  blueSlider  frequency_slider4  frequency_slider whiteSlider  frequency_slider5 logo'
     'redValue  lfo2_value           blueValue    lfo3_value         greenValue         lfo4_value  lfo_value        whiteValue   lfo5_value logo';
@@ -104,10 +105,11 @@
 }
 
 .grid-container>div {
-  background-color: rgb(222, 222, 222);
+  background-color: #303030;
   text-align: center;
   padding: 0px;
   font-size: 15px;
+  color: #808080
 }
 
 .slidecontainer {
@@ -128,7 +130,7 @@
   /* Full-width */
   height: 5px;
   /* Specified height */
-  background: #060606;
+  background: #505050;
   /* Grey background */
   outline: none;
   /* Remove outline */
@@ -160,7 +162,7 @@
   height: 30px;
   /* Slider handle height */
   border-radius: 3px;
-  background: #000000;
+  background: #ffffff;
   /*  background */
   cursor: row-resize;
   /* Cursor on hover */
@@ -172,7 +174,7 @@
   height: 30px;
   /* Slider handle height */
   border-radius: 3px;
-  background: #000000;
+  background: #ffffff;
   /* background */
   cursor: row-resize;
   /* Cursor on hover */
