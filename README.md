@@ -3,7 +3,7 @@ LIGHTWAVE is an additive color synthesiser.
 Use the RGB sliders to mix source colors.
 Syncopated patterns and rhythmic structures can be produced by independently modulating each color with a sinusoidal low frequency oscillator.
 The Alpha mod slider modulates the transparency of the total RGB output pre-white efectively adding black from a background layer.
-The white level is independant and post RGB and post  Alpha.  
+The white level is independant and post RGB and post  Alpha. The color field output is rendered using a P5.js canvas element. 
 
 
 # Things to work on:
